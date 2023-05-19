@@ -17,11 +17,13 @@ public class Student {
 
     // Copy Constructor
     Student(Student otherStudent) {
+        // Shallow copy!
         this.name = otherStudent.name;
         this.id = otherStudent.id;
         this.totalProblemsSolved = otherStudent.totalProblemsSolved;
         // for deep copy
         // for shallow copy -> this.performance = otherStudent.performance
+        // this.performance = otherStudent.performance
         this.performance = new Performance(otherStudent.performance);
     }
 
