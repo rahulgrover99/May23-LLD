@@ -1,3 +1,3 @@
 - Name : Sanket Kumar
 - Batch : Aug22 Intermediate
-- Github Repo Link : https://github.com/okSanky/May23-LLD-1
+- Github Repo Link : https://github.com/okSanky/May23-LLD
