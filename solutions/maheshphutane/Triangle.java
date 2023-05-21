@@ -7,7 +7,7 @@ public class Triangle extends Shape {
         this.height = height;
         this.width = width;
     }
-    public double compute_area(double height,double width){
+    public double compute_area(){
         return height*width;
     }
 }

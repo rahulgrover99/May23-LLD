@@ -9,7 +9,7 @@ public class Shape {
         this.width = width;
     }
 
-    public double compute_area(double height,double width){
+    public double compute_area(){
         return 0;
     }
 }

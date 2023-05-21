@@ -1,15 +1,14 @@
 package solutions.maheshphutane;
 
-
 public class Rectangle extends Shape {
     double height,width;
     public Rectangle(double height,double width){
-        super();
+        super(height,width);
         this.height = height;
         this.width = width;
     }
 
-    public double compute_area(double height,double width){
-        return height*width;
+    public double compute_area(){
+        return this.height*this.width;
     }
 }
