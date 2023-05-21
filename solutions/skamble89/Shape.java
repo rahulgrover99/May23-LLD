@@ -1,10 +1,10 @@
 package solutions.skamble89;
 
-public class shape {
+public class Shape {
     public double height;
     public double width;
 
-    public shape(double height, double width) {
+    public Shape(double height, double width) {
         this.height = height;
         this.width = width;
     }
