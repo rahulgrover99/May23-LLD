@@ -1,8 +1,8 @@
 package solutions.skamble89;
 
-public class triangle extends shape {
+public class Triangle extends Shape {
 
-    public triangle(double height, double width) {
+    public Triangle(double height, double width) {
         super(height, width);
     }
 
