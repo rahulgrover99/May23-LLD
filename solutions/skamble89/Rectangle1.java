@@ -1,7 +1,7 @@
 package solutions.skamble89;
 
-public class rectangle extends shape {
-    public rectangle(double height, double width) {
+public class Rectangle1 extends Shape1 {
+    public Rectangle1(double height, double width) {
         super(height, width);
     }
 

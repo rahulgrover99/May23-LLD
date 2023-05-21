@@ -1,6 +1,6 @@
 package solutions.skamble89;
 
-public class test {
+public class Test1 {
     public static void main(String[] args) {
         System.out.println(
                 "For which shape would you like to compute area? Enter T/t for triangle or enter R/r for Rectangle");
@@ -11,16 +11,16 @@ public class test {
         System.out.println("Enter width");
         Double w = Double.parseDouble(System.console().readLine());
 
-        shape s;
-        if (input.equals("T")) {
-            s = new triangle(h, w);
+        Shape1 s;
+        if (input.equalsIgnoreCase("T")) {
+            s = new Triangle1(h, w);
         } else {
-            s = new rectangle(h, w);
+            s = new Rectangle1(h, w);
         }
         printArea(s);
     }
 
-    private static void printArea(shape s) {
+    private static void printArea(Shape1 s) {
         System.out.println(s.compute_area());
     }
 }
