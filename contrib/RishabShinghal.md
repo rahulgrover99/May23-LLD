@@ -1,6 +1,6 @@
-Rishab Shinghal
+Name :- Rishab Shinghal
 
-August 2022
+Batch :- August 2022
 
 Part 1 Git repo :- https://github.com/rish8089/ScalerLLDAssignments
 
