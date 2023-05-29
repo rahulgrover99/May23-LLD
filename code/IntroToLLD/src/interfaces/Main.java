@@ -8,11 +8,13 @@ public class Main {
         RedBird bird = new RedBird();
         Rocket rocket = new Rocket();
 
+        System.out.println(rocket.rocketSpeed);
 
-        bird.fly();
+
+//        bird.fly();
 
 //        Arrays.sort();
-//        re(List.of(rocket, bird));
+        printFly(List.of(rocket));
 
     }
 

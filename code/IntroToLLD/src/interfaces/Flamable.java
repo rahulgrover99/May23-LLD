@@ -1,5 +1,8 @@
 package interfaces;
 
 public interface Flamable {
-    void fly();
+    int rocketSpeed = 2;
+    default void fly() {
+        System.out.println(rocketSpeed);
+    }
 }
