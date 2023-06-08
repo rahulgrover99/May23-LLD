@@ -1,2 +1,6 @@
-package annotations;public class Main {
+package annotations;
+
+
+public class Main {
 }
+

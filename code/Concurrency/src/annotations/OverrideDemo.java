@@ -7,13 +7,13 @@ class ParentClass {
 }
 
 class ChildClass extends ParentClass {
-//    @Override
-    public void getname() {
+    @Override
+    public void getName() {
         System.out.println("Hehe");
     }
 }
 
-public class Override {
+public class OverrideDemo {
     public static void main(String[] args) {
         ChildClass childClass = new ChildClass();
         childClass.getName();
