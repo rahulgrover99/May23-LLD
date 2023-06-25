@@ -1,5 +1,6 @@
 .DS_Store
 code/IntroToLLD/out
 code/Concurrency/out
+code/DesignPatterns/out
 *.iml
 .idea
