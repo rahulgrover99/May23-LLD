@@ -11,7 +11,8 @@ public class Main {
         ExecutorService executorService = Executors.newFixedThreadPool(13);
         ArrayList<Integer> arrayList = new ArrayList<>(Arrays.asList(2, 3, 1, 4, 8, 1, 5, 7, 8, 9, 10, 3, 4));
         MergeSorter mergeSorter = new MergeSorter(arrayList, executorService);
-        System.out.println(mergeSorter.call());
+        System.out.println(mergeSorter.
+    ());
         executorService.shutdown();
     }
 }
