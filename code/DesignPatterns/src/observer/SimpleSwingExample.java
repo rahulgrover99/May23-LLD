@@ -10,14 +10,19 @@ import javax.swing.JTextArea;
 public class SimpleSwingExample {
 
     public static void main(String[] args) {
+        // GUI toolkit for Java
+
         JFrame frame = new JFrame("Frame Title");
         final JTextArea comp = new JTextArea();
         JButton btn = new JButton("click");
         frame.getContentPane().add(comp, BorderLayout.CENTER);
         frame.getContentPane().add(btn, BorderLayout.SOUTH);
 
-        btn.addActionListener(new AngelListener());
+        // Subscribing new listeners or observers.
+        AngelListener angelListener = new AngelListener();
+        btn.addActionListener(angelListener);
         btn.addActionListener(new DevilListener());
+        btn.removeActionListener(angelListener);
 
         int width = 300;
         int height = 300;
