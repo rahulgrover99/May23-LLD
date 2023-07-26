@@ -1,12 +1,35 @@
 package models;
 
+import java.util.Scanner;
+
 public class Player {
     private String name;
     private char symbol;
     private int id;
     private PlayerType playerType;
+    private Scanner scanner;
 
-    // TODO(rahul): Add a method to make a move.
+    public Move makeMove(Board board) {
+        System.out.println("Enter the row and column where you want to play the move.");
+
+        int row = scanner.nextInt();
+        int col = scanner.nextInt();
+
+        // board.getBoard().get(row).get(col) --> get the cell from the board
+        // Update the cell -> board ends up getting updated.
+
+        Cell cell = new Cell(board.getBoard().get(row).get(col));
+
+        System.out.printf("The player %s is making a move at cell: %d, %d\n",
+                this.name, cell.getRow(), cell.getCol());
+        if (cell.getCellStatus().equals(CellStatus.OCCUPIED)) {
+            throw new IllegalArgumentException("The cell is occupied.");
+        }
+
+        cell.setPlayer(this);
+        cell.setCellStatus(CellStatus.OCCUPIED);
+        return new Move(cell);
+    }
 
     public String getName() {
         return name;
@@ -42,12 +65,12 @@ public class Player {
 
 
 
-    public Player(String name, char symbol, int id, PlayerType playerType) {
+    public Player(String name, char symbol, int id, PlayerType playerType, Scanner scanner) {
         this.name = name;
         this.symbol = symbol;
         this.id = id;
         this.playerType = playerType;
+        this.scanner = scanner;
     }
-
 
 }

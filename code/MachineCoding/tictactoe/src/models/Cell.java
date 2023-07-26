@@ -19,6 +19,13 @@ public class Cell {
         this.player = player;
     }
 
+    public Cell(Cell cell) {
+        this.row = cell.getRow();
+        this.col = cell.getCol();
+        this.cellStatus = cell.getCellStatus();
+        this.player = cell.getPlayer();
+    }
+
     public int getRow() {
         return row;
     }

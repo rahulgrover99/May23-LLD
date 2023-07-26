@@ -1,6 +1,8 @@
 package strategies.bot;
 
+import models.Board;
+import models.Move;
+
 public interface BotPlayingStrategy {
-    // TODO: Implement by getting Player and Board
-//    Move decideMove()
+    Move suggestMove(Board board);
 }
