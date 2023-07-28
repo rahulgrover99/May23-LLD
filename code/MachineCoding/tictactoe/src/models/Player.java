@@ -9,7 +9,22 @@ public class Player {
     private PlayerType playerType;
     private Scanner scanner;
 
+    private static boolean cellAvailable(Board board) {
+        for (int i = 0; i < board.getBoard().size(); i++) {
+            for (int j = 0; j < board.getBoard().size(); j++) {
+                if (board.getBoard().get(i).get(j).getCellStatus().equals(CellStatus.EMPTY)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+
+    }
+
     public Move makeMove(Board board) {
+        if (!cellAvailable(board)) {
+            return null;
+        }
         System.out.println("Enter the row and column where you want to play the move.");
 
         int row = scanner.nextInt();

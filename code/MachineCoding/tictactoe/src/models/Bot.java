@@ -6,9 +6,9 @@ import strategies.bot.BotPlayingStrategyFactory;
 import java.util.Scanner;
 
 public class Bot extends Player {
-    public Bot(String name, char symbol, int id, PlayerType playerType,
+    public Bot(String name, char symbol, int id,
                BotDifficultyLevel botDifficultyLevel, Scanner scanner) {
-        super(name, symbol, id, playerType, scanner);
+        super(name, symbol, id, PlayerType.BOT, scanner);
         this.botDifficultyLevel = botDifficultyLevel;
         this.botPlayingStrategy = BotPlayingStrategyFactory.getBotPlayingStrategy(botDifficultyLevel);
     }
@@ -21,6 +21,11 @@ public class Bot extends Player {
     public Move makeMove(Board board) {
 
         Move move = botPlayingStrategy.suggestMove(board);
+
+        // NPE Check
+        if (move == null) {
+            return null;
+        }
 
         System.out.printf("the bot is making a move %d %d.\n", move.getCell().getRow(), move.getCell().getCol());
 

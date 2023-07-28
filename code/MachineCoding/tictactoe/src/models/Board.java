@@ -22,7 +22,7 @@ public class Board {
             for (int j = 0; j < board.size(); j++) {
                 if (board.get(i).get(j).getCellStatus()
                         .equals(CellStatus.EMPTY)) {
-                    System.out.print("|  |");
+                    System.out.print("| - |");
                 } else {
                     System.out.printf("| %s |",
                             board.get(i).get(j).getPlayer().getSymbol());

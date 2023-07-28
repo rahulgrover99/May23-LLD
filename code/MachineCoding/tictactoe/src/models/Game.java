@@ -85,33 +85,48 @@ public class Game {
 
     }
 
+    public Board getBoard() {
+        return board;
+    }
 
-    // TODO: SRP, controller, services
-    public void makeMove() {
-        Player currentPlayer = players.get(currentPlayerIndex);
-        System.out.printf("Player turn: %s\n", currentPlayer.getName());
+    public GameState getGameState() {
+        return gameState;
+    }
 
-        Move move = currentPlayer.makeMove(board);
+    public Player getCurrentPlayer() {
+        return players.get(currentPlayerIndex);
+    }
+
+    public void addMove(Move move) {
         moves.add(move);
+    }
 
+    public List<WinningStrategy> getWinningStrategies() {
+        return winningStrategies;
+    }
+
+    public void setWinner(Player winner) {
+        this.winner = winner;
+    }
+
+    public void setGameState(GameState gameState) {
+        this.gameState = gameState;
+    }
+
+    public void nextPlayerTurn() {
+        currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
+    }
+
+    public void updateBoard(Move move) {
         // Update the board with the move taken.
         int row = move.getCell().getRow();
         int col = move.getCell().getCol();
 
         // Updating the cell in the board with the move that player took.
         this.board.getBoard().get(row).set(col, move.getCell());
+    }
 
-        for (WinningStrategy winningStrategy: winningStrategies) {
-            if (winningStrategy.checkWinner(board, move)) {
-                System.out.printf("The player %s has won.\n", currentPlayer.getName());
-                gameState = GameState.WIN;
-                break;
-            }
-        }
-
-        currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
-        // displays the board
-        this.board.display();
-
+    public Player getWinner() {
+        return winner;
     }
 }
