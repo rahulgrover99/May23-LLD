@@ -38,10 +38,6 @@ public class Game {
     }
 
     public static class Builder {
-        // 1. Players
-        // 2. Dimension
-        // 3. winning strategies
-
         List<Player> players;
         List<WinningStrategy> winningStrategies;
         int dimension;
@@ -77,7 +73,8 @@ public class Game {
 
         public Game build() {
 
-            // validations here.
+            // TODO: validations here.
+            // TODO: Add excepions here.
 
             return new Game(dimension, players, winningStrategies);
 

@@ -21,6 +21,7 @@ public class Player {
 
     }
 
+    // TODO: Simplify the makeMove method.
     public Move makeMove(Board board) {
         if (!cellAvailable(board)) {
             return null;
