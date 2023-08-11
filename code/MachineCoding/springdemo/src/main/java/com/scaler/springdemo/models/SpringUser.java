@@ -9,9 +9,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class SpringUser {
+public class SpringUser extends BaseModel {
     private String name;
-    @Id
-    @GeneratedValue
-    private Long id;
 }
