@@ -6,4 +6,5 @@ import lombok.Data;
 public class CreateCustomerRequest {
     private String name;
     private String email;
+    private String password;
 }

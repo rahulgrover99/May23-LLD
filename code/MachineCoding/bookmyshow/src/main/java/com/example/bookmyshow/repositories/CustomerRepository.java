@@ -12,6 +12,8 @@ public interface CustomerRepository extends JpaRepository<Customer, Long> {
     @Override
     Optional<Customer> findById(Long aLong);
 
+    Optional<Customer> findCustomerByEmail(String email);
+
     @Override
     Customer save(Customer customer);
 }

@@ -24,7 +24,7 @@ public class CustomerController {
     public CreateCustomerResponse createCustomer(@RequestBody CreateCustomerRequest request) {
         System.out.println("Received a request for creating customer.");
         System.out.println(request.toString());
-        Customer customer = customerService.signUp(request.getName(), request.getEmail());
+        Customer customer = customerService.signUp(request.getName(), request.getEmail(), request.getPassword());
         return new CreateCustomerResponse("OK", customer.getId());
     }
 
